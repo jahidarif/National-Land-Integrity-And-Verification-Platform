@@ -1,0 +1,1 @@
+export const getters = { items:(s:any)=>s.items, pagination:(s:any)=>({page:s.page,pageSize:s.pageSize,totalCount:s.totalCount,totalPages:s.totalPages,hasPrevious:s.hasPrevious,hasNext:s.hasNext}), loading:(s:any)=>s.loading, error:(s:any)=>s.error };

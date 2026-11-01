@@ -1,0 +1,2 @@
+<template><button class="icon-action" :class="variant" :type="type" :disabled="disabled || loading" :title="label" :aria-label="label" @click="$emit('click')"><svg viewBox="0 0 24 24" v-html="icons[icon] || icons.info"/><span v-if="loading" class="icon-spinner"/></button></template>
+<script setup lang="ts">import { icons } from './icons'; withDefaults(defineProps<{icon:string;label:string;variant?:string;disabled?:boolean;loading?:boolean;type?:'button'|'submit'}>(),{variant:'',disabled:false,loading:false,type:'button'}); defineEmits(['click']);</script>

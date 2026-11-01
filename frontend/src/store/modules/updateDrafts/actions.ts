@@ -1,0 +1,2 @@
+import { platformApi } from '@/services/platform';
+export const actions = { async load({commit}:any,params:any={}){commit("SET_LOADING",true);commit("SET_ERROR",null);try{const {data}=await platformApi.updateDrafts(params.page??1);commit("SET_RESULT",data);return data}catch(error:any){const message=error.response?.data?.detail||"Could not load updateDrafts";commit("SET_ERROR",message);throw error}finally{commit("SET_LOADING",false)}} };

@@ -1,0 +1,2 @@
+import {adminApi} from'./admin';import{officerApi}from'./officer';import{userApi}from'./user';
+export const platformApi={...adminApi,officerLands:officerApi.lands,updateDrafts:officerApi.updateDrafts,createDrafts:officerApi.createDrafts,draftSummary:officerApi.draftSummary,userLands:userApi.lands,documents:userApi.documents,uploadDocument:userApi.uploadDocument,documentUrl:userApi.documentUrl,deleteDocument:userApi.deleteDocument};

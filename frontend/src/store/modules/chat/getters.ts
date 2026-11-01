@@ -1,0 +1,1 @@
+export const getters={conversations:(s:any)=>s.conversations,activeConversationId:(s:any)=>s.activeConversationId,messages:(s:any)=>s.messages,loadingHistory:(s:any)=>s.loadingHistory,sending:(s:any)=>s.sending,error:(s:any)=>s.error};

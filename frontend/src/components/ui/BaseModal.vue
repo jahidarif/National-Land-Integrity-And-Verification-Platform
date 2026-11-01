@@ -1,0 +1,2 @@
+<template><div class="modal-backdrop" @click.self="$emit('close')"><section class="glass-modal" :class="{wide:wide}"><div class="modal-heading"><h3>{{title}}</h3><IconButton icon="cancel" label="Close dialog" @click="$emit('close')"/></div><slot/></section></div></template>
+<script setup lang="ts">import IconButton from './IconButton.vue';withDefaults(defineProps<{title:string;wide?:boolean}>(),{wide:false});defineEmits<{close:[]}>();</script>

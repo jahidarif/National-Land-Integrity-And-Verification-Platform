@@ -1,0 +1,2 @@
+<template><div class="pagination"><span>Page {{page}} of {{totalPages}}</span><div><IconButton icon="previous" label="Previous page" :disabled="!hasPrevious" @click="$emit('change',page-1)"/><IconButton icon="next" label="Next page" :disabled="!hasNext" @click="$emit('change',page+1)"/></div></div></template>
+<script setup lang="ts">import IconButton from './IconButton.vue';defineProps<{page:number;totalPages:number;hasPrevious:boolean;hasNext:boolean}>();defineEmits<{change:[page:number]}>();</script>

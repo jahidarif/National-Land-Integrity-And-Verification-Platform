@@ -1,0 +1,2 @@
+import api from'./http/api-client';
+export const userApi={lands:(page=1)=>api.get('/user/lands',{params:{page}}),land:(id:string)=>api.get(`/user/lands/${id}`),documents:(page=1,q='')=>api.get('/user/documents',{params:{page,q}}),uploadDocument:(file:File,onUploadProgress?:(event:any)=>void)=>{const body=new FormData();body.append('file',file);return api.post('/user/documents',body,{headers:{'Content-Type':'multipart/form-data'},onUploadProgress})},documentUrl:(id:string)=>api.get(`/user/documents/${id}/url`),deleteDocument:(id:string)=>api.delete(`/user/documents/${id}`)};

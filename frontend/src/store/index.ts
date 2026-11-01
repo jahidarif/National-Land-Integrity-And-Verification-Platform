@@ -1,0 +1,12 @@
+import { createStore } from 'vuex';
+import auth from './modules/auth';
+import chat from './modules/chat';
+import officers from './modules/officers';
+import areas from './modules/areas';
+import areaLookup from './modules/areaLookup';
+import officerLands from './modules/officerLands';
+import updateDrafts from './modules/updateDrafts';
+import createDrafts from './modules/createDrafts';
+import userLands from './modules/userLands';
+import documents from './modules/documents';
+export default createStore({ modules: { auth, chat, officers, areas, areaLookup, officerLands, updateDrafts, createDrafts, userLands, documents } });
